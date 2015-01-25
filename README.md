@@ -12,8 +12,10 @@ source("run_analysis.R")
 theData <- Activities$new( newPath="pathtoyourextracteddata" )
 theData$extractMeasurements()
 ```
-If a fileName is provided to getTidyResults, it will save the data to the provided file.  
-The code assumes the complete path to the file already exists
+If a fileName (optional) is provided to getTidyResults, it will save the data to the provided file.  
+The code assumes the complete path to the file already exists.
+
+If no fileName is passed, output is written to the console.
 ```
-theData$getTidyResults()
+theData$getTidyResults( fileName="myfile.txt" )
 ```
